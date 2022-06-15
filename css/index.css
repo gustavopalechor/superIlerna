@@ -1,0 +1,36 @@
+label{
+		display: inline-block;
+		width: 100px;
+	}
+body{
+		background-color: #16b4ef;
+	}
+
+		#titulo{
+			text-align: center;
+			font-size: xx-large;
+		}
+		.cajas{
+			text-align: center ;
+			margin: 0 auto;
+  			padding: 1rem;
+			
+			border: 2px solid #ccc;
+
+		}
+
+		.subtitulos{
+			text-align: center ;
+		}
+		#cajaFormulario{
+			width: 220px;
+			height: 230px;
+			align-content: center;
+  			
+			font-size: x-large;
+		}
+		a{
+			text-decoration: none;
+			color: inherit;
+
+		}
