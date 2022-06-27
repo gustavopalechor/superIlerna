@@ -7,6 +7,11 @@
 	<link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
 <body>
+	<?php 
+	require "comprueba_sesion.php"
+
+
+	?>
 	<h1 id="titulo"><span>super</span>Ilerna</h1>
 
 	<h3 class="subtitulos">Baja producto</h3>

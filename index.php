@@ -25,7 +25,7 @@
 		<input type="text" name="login" id="login" /><br><br>
 
 		<label for="password">Contraseña</label>
-		<input type="password" name="password" id="password" /><br><br>
+		<input type="password" name="contraseña" id="contraseña" /><br><br>
 
 		<span id=botones>
 		<input type="submit" name="entrar" class="botonFormulario" id="entrar" value="Entrar" /> &nbsp;

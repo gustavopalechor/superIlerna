@@ -13,12 +13,12 @@
 
 		$base->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-		$sql="SELECT USUARIOS FROM USUARIOS_PASS WHERE USUARIOS= :login AND PASSWORD= :password";
+		$sql="SELECT * FROM USUARIOS_PASS WHERE USUARIOS= :login AND PASSWORD= :password";
 
-		$resultado=$base->prepare("sql");
+		$resultado=$base->prepare($sql);
 
 		$login=htmlentities(addslashes($_POST["login"]));
-		$password=htmlentities(addslashes($_POST["password"]));
+		$password=htmlentities(addslashes($_POST["contraseña"]));
 
 		$resultado->bindValue(":login", $login);
 		$resultado->bindValue(":password", $password);
@@ -28,18 +28,21 @@
 		$numero_registro=$resultado->rowCount();
 
 		if ($numero_registro!=0) {
-			echo "<h2>Adelante!!</h2>";
+			session_start();
+			$_SESSION['usuario']=$_POST['login'];
+
+			header("location:encargado.php");
 		}
 		else{
 
-			header("location:login.php");
+			header("location:index.php");
 
 		}
 
 
 	}
 	catch(Exception $e){
-		die("Error: " . $e->getMessage());
+		die("Error: " . $e->getCode());
 	}
 ?>	
 
